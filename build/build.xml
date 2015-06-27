@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project default="deploy" name="Java Basic Web" basedir="..">
+	  <property name="target" value="D:\.desktop\apache-tomcat-6.0.44\webapps\java-web-app"/>
+	<property name="classes" value="${basedir}/WebContent/WEB-INF/classes"/>
+	<path id="master-classpath">
+	  <fileset dir="${basedir}/lib">
+	    <include name="*.jar"/>
+	  </fileset>
+	</path>
+
+	
+	
+	<target name="deploy" depends="compile">
+    	 <copy todir="${target}">
+    	            <fileset dir="${basedir}/WebContent">
+    	                <include name="**"/>
+    	                <exclude name=".svn"/>
+    	            	<exclude name="*.html"/>
+    	            </fileset>
+    	 </copy>
+    </target>
+	
+	 <target name="compile" depends="clean">
+	 	<mkdir dir="${classes}"/>
+
+	 	<javac srcdir="src" debug="on" destdir="${classes}">
+	 		<classpath refid="master-classpath"/>
+	 	</javac>
+	 	
+	</target>
+	
+	<target name="clean">
+		<delete>
+			 <fileset dir="${target}" includes="**" />
+		</delete>
+	</target>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</project>
