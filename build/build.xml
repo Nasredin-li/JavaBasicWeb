@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project default="deploy" name="Java Basic Web" basedir="..">
-	  <property name="target" value="D:\.desktop\apache-tomcat-6.0.44\webapps\java-web-app"/>
+	  <property name="target" value="f:/JAVA/apache-tomcat-8.0.23/webapps/java-web-apps/"/>
 	<property name="classes" value="${basedir}/WebContent/WEB-INF/classes"/>
 	<path id="master-classpath">
 	  <fileset dir="${basedir}/lib">
