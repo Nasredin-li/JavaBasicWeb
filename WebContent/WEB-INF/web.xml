@@ -4,24 +4,26 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
  
-    <servlet>
-        <servlet-name>mainServlet</servlet-name>
-        <servlet-class>com.sourceit.web.MainServlet</servlet-class>
-    </servlet>
- 
-    <servlet-mapping>
-        <servlet-name>mainServlet</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
+   
     
     <servlet>
-        <servlet-name>adminServlet</servlet-name>
-        <servlet-class>com.sourceit.web.AdminServlet</servlet-class>
+        <servlet-name>notesServlet</servlet-name>
+        <servlet-class>com.sourceit.web.notes.NotesServlet</servlet-class>
     </servlet>
  
     <servlet-mapping>
-        <servlet-name>adminServlet</servlet-name>
-        <url-pattern>/admin/</url-pattern>
+        <servlet-name>notesServlet</servlet-name>
+        <url-pattern>/notes</url-pattern>
+    </servlet-mapping>
+  
+   <servlet>
+        <servlet-name>commentServlet</servlet-name>
+        <servlet-class>com.sourceit.web.comment.CommentServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>commentServlet</servlet-name>
+        <url-pattern>/comment</url-pattern>
     </servlet-mapping>
  
 </web-app>
